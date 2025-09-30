@@ -14,8 +14,7 @@ connectDB();
 const app = express();
 
 
-app.use(cors());
-
+git add .
 app.use(express.json());
 
 
