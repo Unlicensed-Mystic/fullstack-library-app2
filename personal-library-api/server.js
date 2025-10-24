@@ -14,7 +14,7 @@ const app = express();
 const corsOptions = {
   origin: 'https://bookcord.netlify.app', 
   methods: 'GET,POST,PUT,DELETE',          
-  allowedHeaders: 'Content-Type,Authorization',
+  allowedHeaders: 'Content-Type,Authorization', 
   optionsSuccessStatus: 200
 };
 
