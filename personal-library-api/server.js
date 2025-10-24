@@ -10,19 +10,18 @@ connectDB();
 
 const app = express();
 
-// --- START: CORS Configuration ---
-// This block must come BEFORE your routes
+
 const corsOptions = {
-  origin: 'https://bookcord.netlify.app', // Your live frontend URL
-  methods: 'GET,POST,PUT,DELETE',          // Allowed request methods
-  allowedHeaders: 'Content-Type,Authorization', // Allowed request headers
+  origin: 'https://bookcord.netlify.app', 
+  methods: 'GET,POST,PUT,DELETE',          
+  allowedHeaders: 'Content-Type,Authorization',
   optionsSuccessStatus: 200
 };
 
 app.use(cors(corsOptions));
-// Handle preflight requests for all routes
+
 app.options('*', cors(corsOptions));
-// --- END: CORS Configuration ---
+
 
 app.use(express.json());
 
@@ -43,5 +42,3 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
-
-
