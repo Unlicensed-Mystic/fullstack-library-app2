@@ -14,7 +14,7 @@ connectDB();
 const app = express();
 
 
-git add .
+
 app.use(express.json());
 
 
